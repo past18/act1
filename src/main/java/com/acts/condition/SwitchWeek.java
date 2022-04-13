@@ -2,35 +2,16 @@ package com.acts.condition;
 
 public class SwitchWeek {
     public static String nameOfDay(int day) {
-        String name;
-        switch (day) {
-            case 1:
-                name = "Monday";
-                break;
-            case 2:
-                name = "Tu";
-                break;
-            case 3:
-                name = "We";
-                break;
-            case 4:
-                name = "Th";
-                break;
-            case 5:
-                name = "Fr";
-                break;
-            case 6:
-                name = "Sa";
-                break;
-            case 7:
-                name = "Su";
-                break;
-            default:
-                name = "Error";
-                break;
-
-        }
-        return name;
+        return switch (day) {
+            case 1 -> "Monday";
+            case 2 -> "Tu";
+            case 3 -> "We";
+            case 4 -> "Th";
+            case 5 -> "Fr";
+            case 6 -> "Sa";
+            case 7 -> "Su";
+            default -> "Error";
+        };
     }
 
     public static void main(String[] args) {
