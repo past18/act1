@@ -21,4 +21,20 @@ public class FindLoopTest {
         int expected = -1;
         assertEquals(result, expected);
     }
+
+    @Test
+    public void findIndexInRange() {
+        int[] test1 = new int[]{0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+        int result = FindLoop.indexInRange(test1, 6, 6, 7);
+        int expected = 6;
+        assertEquals(result, expected);
+    }
+
+    @Test
+    public void findIndexInRange2() {
+        int[] test1 = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9};
+        int result = FindLoop.indexInRange(test1, 5, 0, 8);
+        int expected = 4;
+        assertEquals(result, expected);
+    }
 }
